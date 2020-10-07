@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NgModel} from "@angular/forms";
+import {NgForm, NgModel} from "@angular/forms";
+import {User} from "./models/user";
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,23 @@ import {NgModel} from "@angular/forms";
 export class AppComponent {
   title = 'tryToPush';
 
+  user: User = {
+    name : 'vasyl', age : 31
+  };
+
   // getTitle(yyy: HTMLInputElement): void {
   //   console.log(this.title);
   //   console.log(yyy);
   //   console.log(yyy.value);
 
-  getTitle(yyy: NgModel): void {
-    console.log(yyy);
+  // getTitle(yyy: NgModel): void {
+  //   console.log(yyy);
+  //
+  // }
 
+
+  // action(name: NgModel, age: NgModel) : void {
+action(form: NgForm) : void {
+  console.log(form);
   }
-
 }

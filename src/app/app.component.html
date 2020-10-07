@@ -1,9 +1,20 @@
-<h2>app component</h2>
-<div><input [(ngModel)]="title" #yyy="ngModel" required></div>
+<!--<h2>app component</h2>-->
+<!--<div><input [(ngModel)]="title" #yyy="ngModel" required></div>-->
 
-<div *ngIf="yyy.invalid">
-you must fill this input!
+<!--<div *ngIf="yyy.invalid">-->
+<!--you must fill this input!-->
 
-</div>
+<!--</div>-->
 
-<button (click)="getTitle(yyy)" [disabled]="yyy.invalid">get Title</button>
+<!--<button (click)="getTitle(yyy)" [disabled]="yyy.invalid">get Title</button>-->
+
+<!--<input [(ngModel)]="user.name" #name="ngModel">-->
+<!--<input type="number" [(ngModel)]="user.age" #age="ngModel">-->
+<!--<button (click)="action(name, age)">send</button>-->
+<!--last method is not very good/ so next one-->
+
+<form #form="ngForm">
+<input [(ngModel)]="user.name" name="xxx" required>
+<input type="number" [(ngModel)]="user.age" name="qqq" min="1">
+<button (click)="action(form)">send</button>
+</form>
