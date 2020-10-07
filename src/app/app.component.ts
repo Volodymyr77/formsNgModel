@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgModel} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tryToPush';
+
+  // getTitle(yyy: HTMLInputElement): void {
+  //   console.log(this.title);
+  //   console.log(yyy);
+  //   console.log(yyy.value);
+
+  getTitle(yyy: NgModel): void {
+    console.log(yyy);
+
+  }
+
 }
